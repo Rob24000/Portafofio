@@ -11,6 +11,7 @@
     transform: translateY(0);
   }
 }
+
 /* Estilos generales */
 body {
   font-family: 'Poppins', sans-serif;
@@ -149,7 +150,6 @@ h2 {
   border-bottom: 3px solid #2563eb;
   padding-bottom: 12px;
   font-weight: 700;
-
 }
 
 .btn-cv {
@@ -159,14 +159,12 @@ h2 {
   padding: 14px 28px;
   border-radius: 12px;
   font-size: 1.2em;
-  font-weight: 60;
+  font-weight: 600;
   cursor: pointer;
   text-decoration: none;
   margin-top: 28px;
   box-shadow: 0 6px 15px rgba(59,130,246,0.6);
   transition: all 0.35s ease;
-  right: 1000;
-
 }
 
 .btn-cv:hover {
@@ -205,6 +203,7 @@ h2 {
   .presentacion,
   section {
     padding: 90px 20px 30px;
+    width: 95%;
   }
 
   .imagen-circular {
@@ -299,7 +298,6 @@ h2 {
   filter: brightness(1.2);
 }
 
-
 @media screen and (max-width: 768px) {
   .competencias-container {
     flex-direction: column;
@@ -329,6 +327,7 @@ h2 {
   text-align: center;
   color: #222;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 200px;
 }
 
 .formacion-card:hover {
@@ -360,4 +359,15 @@ h2 {
   color: #2563eb;
   font-size: 1.3em;
   font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .formacion-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formacion-card {
+    max-width: 100%;
+  }
 }

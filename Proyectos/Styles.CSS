@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
+/* ===== Reset global ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #64748b, #6c88af);
@@ -10,9 +15,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding-top: 75px; /* o el alto real del navbar */
-
-
+  padding-top: 75px;
   animation: fadeInBody 0.25s ease forwards;
 }
 
@@ -21,7 +24,7 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Navbar fijo arriba sin animaciones */
+/* ===== Navbar fijo ===== */
 .navbar {
   background-color: #14213d;
   padding: 18px 20px;
@@ -43,7 +46,6 @@ body {
 .navbar li {
   display: inline-block;
   margin: 0 22px;
-  opacity: 1;
 }
 
 .navbar a {
@@ -63,10 +65,7 @@ body {
   box-shadow: 0 4px 12px #facc15aa;
 }
 
-/* Para que el main no quede bajo la navbar */
-
-
-/* Sección principal proyectos */
+/* ===== Sección principal ===== */
 .proyectos-principal {
   max-width: 900px;
   margin: 40px auto 60px;
@@ -76,8 +75,6 @@ body {
   border: 1px solid #000;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
   color: #222;
-
-  opacity: 0;
   animation: fadeInUp 0.25s ease forwards;
   animation-delay: 0.55s;
 }
@@ -87,7 +84,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Título de sección */
 .proyectos-principal h2 {
   color: #2563eb;
   font-size: 2.1em;
@@ -96,8 +92,6 @@ body {
   border-bottom: 3px solid #2563eb;
   padding-bottom: 12px;
   font-weight: 700;
-
-  opacity: 0;
   animation: fadeInTitle 0.2s ease forwards;
   animation-delay: 0.65s;
 }
@@ -107,9 +101,10 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Cada proyecto */
+/* ===== Cada proyecto ===== */
 .proyecto {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   gap: 30px;
   margin-bottom: 48px;
@@ -119,10 +114,6 @@ body {
   border: 1px solid #000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   color: #222;
-  flex-wrap: nowrap;
-
-  opacity: 0;
-  transform: translateY(8px);
   animation: fadeInUp 0.2s ease forwards;
 }
 
@@ -130,7 +121,7 @@ body {
 .proyecto:nth-child(2) { animation-delay: 0.775s; }
 .proyecto:nth-child(3) { animation-delay: 0.85s; }
 
-/* Contenedor imagen + botón */
+/* ===== Imagen proyecto ===== */
 .proyecto-imagen {
   display: flex;
   flex-direction: column;
@@ -140,9 +131,6 @@ body {
   border-radius: 12px;
   overflow: hidden;
   width: 280px;
-
-  opacity: 0;
-  transform: scale(0.97);
   animation: fadeInScale 0.2s ease forwards;
   animation-delay: 0.875s;
 }
@@ -152,7 +140,6 @@ body {
   to { opacity: 1; transform: scale(1); }
 }
 
-/* Imagen proyecto */
 .proyecto-imagen img {
   width: 100%;
   height: 180px;
@@ -160,7 +147,6 @@ body {
   border-radius: 12px;
   border: 1px solid #000;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  display: block;
   transition: transform 0.3s ease;
 }
 
@@ -168,7 +154,7 @@ body {
   transform: scale(1.05) rotate(1deg);
 }
 
-/* Botón debajo imagen */
+/* ===== Botón GitHub ===== */
 .btn-github-bajo {
   display: inline-flex;
   align-items: center;
@@ -187,8 +173,6 @@ body {
   border: 2px solid transparent;
   cursor: pointer;
   user-select: none;
-
-  opacity: 0;
   animation: fadeInBtn 0.15s ease forwards;
   animation-delay: 0.925s;
 }
@@ -200,7 +184,6 @@ body {
 
 .btn-github-bajo i.fab.fa-github {
   font-size: 1.5em;
-  color: #fafafa;
   transition: color 0.3s ease;
 }
 
@@ -216,14 +199,13 @@ body {
   color: #14213d;
 }
 
-/* Descripción al lado */
+/* ===== Descripción proyecto ===== */
 .proyecto-descripcion {
   flex: 1;
   min-width: 320px;
   padding-top: 8px;
 }
 
-/* Título proyecto */
 .proyecto-descripcion h3 {
   font-weight: 700;
   color: #2563eb;
@@ -231,20 +213,15 @@ body {
   font-size: 1.5em;
   text-decoration: underline;
   max-width: 420px;
-
-  opacity: 0;
   animation: fadeInTitle 0.2s ease forwards;
   animation-delay: 0.75s;
 }
 
-/* Texto descripción */
 .proyecto-descripcion p {
   font-size: 1.15em;
   line-height: 1.55;
   color: #334155;
   font-weight: 500;
-
-  opacity: 0;
   animation: fadeInText 0.2s ease forwards;
   animation-delay: 0.775s;
 }
@@ -254,7 +231,7 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Footer */
+/* ===== Footer ===== */
 .footer {
   background-color: #1a1a1a;
   color: #ddd;
@@ -262,8 +239,6 @@ body {
   padding: 30px 20px;
   margin-top: 70px;
   font-size: 0.9em;
-
-  opacity: 0;
   animation: fadeInBody 0.35s ease forwards;
   animation-delay: 1s;
 }
@@ -279,7 +254,22 @@ body {
   color: #93c5fd;
 }
 
-/* Responsive */
+/* ===== Iconos ===== */
+.icono-proyecto {
+  font-size: 100px;
+  color: #333;
+  display: block;
+  margin: 60px auto 15px;
+  text-align: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icono-proyecto:hover {
+  transform: scale(1.1);
+  color: #007bff;
+}
+
+/* ===== Responsive: tablets y móviles ===== */
 @media (max-width: 768px) {
   .navbar li {
     display: block;
@@ -296,9 +286,8 @@ body {
   }
 
   .proyecto-imagen img {
-    width: 100%;
-    height: auto;
     max-height: 260px;
+    height: auto;
   }
 
   .btn-github-bajo {
@@ -308,7 +297,6 @@ body {
   }
 
   .proyecto-descripcion {
-    min-width: auto;
     padding-top: 20px;
   }
 
@@ -318,19 +306,41 @@ body {
   }
 }
 
-/* --- Iconos grandes para proyectos --- */
-.icono-proyecto {
-  font-size: 100px;
-  color: #333;
-  display: block;
-  margin: 3 auto 15px;
-  text-align: center;
-  transition: transform 0.3s ease, color 0.3s ease;
-  margin-top: 60px; /* Mueve el icono 15px hacia abajo */
+/* ===== Responsive: móviles pequeños ===== */
+@media (max-width: 480px) {
+  body {
+    padding-top: 60px;
+  }
 
-}
+  .navbar {
+    padding: 14px 10px;
+  }
 
-.icono-proyecto:hover {
-  transform: scale(1.1);
-  color: #007bff;
+  .navbar a {
+    font-size: 1em;
+    padding: 5px 8px;
+  }
+
+  .proyecto {
+    padding: 16px 12px;
+    gap: 16px;
+  }
+
+  .proyecto-descripcion h3 {
+    font-size: 1.2em;
+  }
+
+  .proyecto-descripcion p {
+    font-size: 1em;
+  }
+
+  .btn-github-bajo {
+    font-size: 1em;
+    width: 90%;
+  }
+
+  .icono-proyecto {
+    font-size: 64px;
+    margin-top: 30px;
+  }
 }
