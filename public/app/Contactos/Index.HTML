@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contactos</title>
+  <link rel="stylesheet" href="Styles.CSS" />
+  <link rel="shortcut icon" href="../Images/contactos.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <div class="menu">
+    <header> 
+      <nav class="navbar">
+        <ul>
+          <li><a href="/public/Index.HTML">Inicio</a></li>
+          <li><a href="../Proyectos/Index.HTML">Proyectos</a></li>
+          <li><a href="../Habilidades/Index.HTML">Habilidades</a></li>
+          <li><a href="../Contactos/Index.HTML" class="active">Contactos</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <main class="contacto-principal">
+    <section class="contacto-descripcion">
+      <h2><em> <i class="fa-solid fa-phone"></i> Contáctame</em></h2>
+      <p>
+        ¡Gracias por visitar mi portafolio! Si deseas comunicarte conmigo para colaborar en un proyecto, 
+        recibir asesoría técnica, o simplemente para saludar, no dudes en hacerlo. Estoy siempre disponible 
+        para nuevas oportunidades laborales, freelance o de innovación en tecnología.
+      </p>
+    </section>
+
+    <section class="contacto-enlaces">
+      <ul>
+        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:robrodrigerm@gmail.com">robrodrigerm@gmail.com</a></li>
+        <li><i class="fab fa-github"></i> <a href="https://github.com/Rob24000" target="_blank">GitHub: Rob24000</a></li>
+        <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn: /tuusuario</a></li>
+        <li><i class="fa-solid fa-location-dot"></i> <span>República Dominicana</span></li>
+      </ul>
+    </section>
+
+    <section class="contacto-formulario">
+      <h3>Formulario de contacto</h3>
+      <form action="#" method="post">
+        <input type="text" name="nombre" placeholder="Tu nombre completo" required />
+        <input type="email" name="correo" placeholder="Correo electrónico" required />
+        <input type="text" name="asunto" placeholder="Asunto" required />
+        <textarea name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Robert Rodríguez. Todos los derechos reservados.</p>
+    <p>
+      Contacto directo:
+      <a href="mailto:robrodrigerm@gmail.com">
+        <i class="fa-solid fa-envelope"></i> robrodrigerm@gmail.com
+      </a>
+    </p>
+    <p>
+      Sígueme:
+      <a href="https://github.com/Rob24000" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a> |
+      <a href="https://linkedin.com/in/tuusuario" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </p>
+  </footer>
+</body>
+</html>
