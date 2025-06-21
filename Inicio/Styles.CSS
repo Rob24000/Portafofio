@@ -50,6 +50,13 @@ body {
   box-shadow: 0 10px 12px #facc15aa;
 }
 
+.navbar a.active {
+  background-color: #e0f4f5;
+  color: #14213d;
+  box-shadow: 0 1px 4px 4px #fcfbf7aa;
+}
+
+
 .presentacion {
   background: linear-gradient(135deg, #1c45c0, #4082ec);
   padding: 60px 30px 70px;
@@ -346,6 +353,80 @@ h2 {
   color: #93c5fd;
 }
 
+@media screen and (max-width: 695px) {
+   /* Navbar más compacta */
+  .navbar {
+    padding: 15px 0px;
+  }
 
+  .navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
 
+  .navbar li {
+    margin: 0;
+  }
+
+  .navbar a {
+    font-size: 0.94em;
+    padding: 3px 8px;
+  }
+
+  h2{
+    font-size: 1.5em;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  .competencia-modulo h3{
+    font-size: 1.2em;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+
+  }
+
+  .formacion-container {
+    padding: 15px 1px;
+    gap: 30px;
+    border-radius: 8px;
+  }
+
+  .formacion-card{
+   font-size: 0.85em;
+   line-height: 1.4;
+   text-align: justify;
+   margin: 0;
+   overflow: hidden;
+   text-overflow: ellipsis;
+  }
+
+  .formacion-card h3 {
+    font-size: 1.2em;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .proyectos-destacados{
+    padding: 10px 8px;
+    gap: 10px;
+  }
+
+  .experiencia {
+    padding: 10px 8px;
+    gap: 10px;
+  }
+
+  
+
+  
+  .footer {
+    font-size: 0.75em;
+    padding: 16px 4px;
+  }
+}
 
