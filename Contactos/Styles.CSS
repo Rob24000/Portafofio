@@ -3,15 +3,19 @@
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #64748b, #6c88af);
-  color: #f0f0f0;
   margin: 0;
   padding: 0;
   line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
 }
 
+/* ===== Navbar fijo ===== */
 .navbar {
   background-color: #14213d;
-  padding: 1.125rem 1.25rem; /* 18px 20px */
+  padding: 18px 20px;
   text-align: center;
   width: 100%;
   position: fixed;
@@ -21,49 +25,44 @@ body {
   backdrop-filter: saturate(180%) blur(8px);
 }
 
-/* Navbar lista horizontal para pantallas grandes */
 .navbar ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.375rem; /* 22px */
 }
 
-/* Items de navbar como bloques */
 .navbar li {
   display: inline-block;
-  margin: 0;
+  margin: 0 22px;
 }
 
 .navbar a {
   text-decoration: none;
   color: #f0f4f8;
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.15em;
   border-radius: 8px;
-  padding: 0.375rem 0.625rem; /* 6px 10px */
+  padding: 6px 10px;
   transition: all 0.3s ease;
 }
 
 .navbar a:hover {
   background-color: #facc15;
   color: #14213d;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px #facc15aa;
+  box-shadow: 0 10px 12px #facc15aa;
 }
 
+/* MAIN contenido */
 main.contacto-principal {
-  max-width: 90%;
-  max-width: clamp(320px, 90%, 900px); /* mínimo 320px, máximo 900px */
-  margin: 8rem auto 3.75rem; /* 130px 60px con rem */
+  max-width: clamp(320px, 90%, 900px);
+  margin: 8rem auto 3.75rem; 
   padding: 2rem;
   background-color: #f5f5f5;
   color: #222;
   border-radius: 16px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border: 3px solid #000000;
+
 }
 
 .contacto-descripcion h2 {
@@ -78,18 +77,18 @@ main.contacto-principal {
 .contacto-descripcion p {
   font-size: 1.2rem;
   text-align: center;
-  margin-top: 1.25rem; /* 20px */
+  margin-top: 1.25rem;
 }
 
 .contacto-enlaces ul {
   list-style: none;
   padding: 0;
-  margin-top: 1.875rem; /* 30px */
+  margin-top: 1.875rem;
   text-align: center;
 }
 
 .contacto-enlaces li {
-  margin: 0.625rem 0; /* 10px */
+  margin: 0.625rem 0;
   font-size: 1.1rem;
 }
 
@@ -105,30 +104,30 @@ main.contacto-principal {
 }
 
 .contacto-formulario {
-  margin-top: 2.5rem; /* 40px */
+  margin-top: 2.5rem;
   text-align: center;
 }
 
 .contacto-formulario h3 {
   color: #2563eb;
   font-size: 1.5rem;
-  margin-bottom: 1.25rem; /* 20px */
+  margin-bottom: 1.25rem;
 }
 
 .contacto-formulario form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .contacto-formulario input,
 .contacto-formulario textarea {
   width: 100%;
   max-width: 600px;
-  padding: 0.75rem; /* 12px */
+  padding: 0.75rem;
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: 2px solid #000000;
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
   resize: vertical;
@@ -138,10 +137,10 @@ main.contacto-principal {
 .contacto-formulario button {
   background: linear-gradient(135deg, #2563eb, #3b82f6);
   color: white;
-  padding: 0.75rem 1.625rem; /* 12px 26px */
+  padding: 0.75rem 1.625rem;
   font-size: 1rem;
   font-weight: 600;
-  border: none;
+  border: 3px solid #000;
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
@@ -157,15 +156,15 @@ main.contacto-principal {
   background-color: #1a1a1a;
   color: #ddd;
   text-align: center;
-  padding: 1.875rem 1.25rem; /* 30px 20px */
-  margin-top: 3.75rem; /* 60px */
+  padding: 1.875rem 1.25rem;
+  margin-top: 3.75rem;
   font-size: 0.9rem;
 }
 
 .footer a {
   color: #3b82f6;
   text-decoration: none;
-  margin: 0 0.625rem; /* 10px */
+  margin: 0 0.625rem;
   transition: color 0.3s ease;
 }
 
@@ -173,57 +172,5 @@ main.contacto-principal {
   color: #93c5fd;
 }
 
-/* Media Queries para adaptarse a pantallas más pequeñas */
 
-/* Tablet y móviles grandes */
-@media screen and (max-width: 1024px) {
-  main.contacto-principal {
-    padding: 1.5rem;
-    margin-top: 7rem;
-  }
 
-  .contacto-formulario input,
-  .contacto-formulario textarea {
-    max-width: 100%;
-  }
-}
-
-/* Móviles medianos y pequeños */
-@media screen and (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .navbar li {
-    display: block;
-    margin: 0;
-  }
-
-  main.contacto-principal {
-    margin-top: 9rem;
-    padding: 1rem;
-  }
-
-  .contacto-formulario input,
-  .contacto-formulario textarea {
-    width: 90%;
-  }
-}
-
-/* Móviles muy pequeños */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .contacto-descripcion h2 {
-    font-size: 1.5rem;
-  }
-
-  .contacto-descripcion p,
-  .contacto-enlaces li {
-    font-size: 1rem;
-  }
-}

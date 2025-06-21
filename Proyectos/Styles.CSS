@@ -1,14 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-/* ===== Reset global ===== */
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #64748b, #6c88af);
-  color: #f0f0f0;
   margin: 0;
   padding: 0;
   line-height: 1.65;
@@ -16,12 +10,6 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 75px;
-  animation: fadeInBody 0.25s ease forwards;
-}
-
-@keyframes fadeInBody {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== Navbar fijo ===== */
@@ -61,8 +49,7 @@ body {
 .navbar a:hover {
   background-color: #facc15;
   color: #14213d;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px #facc15aa;
+  box-shadow: 0 10px 12px #facc15aa;
 }
 
 /* ===== Sección principal ===== */
@@ -72,16 +59,9 @@ body {
   padding: 45px 30px;
   background-color: #f5f5f5;
   border-radius: 16px;
-  border: 1px solid #000;
+  border: 3px solid #000;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
   color: #222;
-  animation: fadeInUp 0.25s ease forwards;
-  animation-delay: 0.55s;
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 .proyectos-principal h2 {
@@ -92,13 +72,6 @@ body {
   border-bottom: 3px solid #2563eb;
   padding-bottom: 12px;
   font-weight: 700;
-  animation: fadeInTitle 0.2s ease forwards;
-  animation-delay: 0.65s;
-}
-
-@keyframes fadeInTitle {
-  from { opacity: 0; transform: translateY(5px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== Cada proyecto ===== */
@@ -111,15 +84,11 @@ body {
   padding: 24px 20px;
   background: #ffffff;
   border-radius: 12px;
-  border: 1px solid #000;
+  border: 3px solid #000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   color: #222;
   animation: fadeInUp 0.2s ease forwards;
 }
-
-.proyecto:nth-child(1) { animation-delay: 0.7s; }
-.proyecto:nth-child(2) { animation-delay: 0.775s; }
-.proyecto:nth-child(3) { animation-delay: 0.85s; }
 
 /* ===== Imagen proyecto ===== */
 .proyecto-imagen {
@@ -135,51 +104,27 @@ body {
   animation-delay: 0.875s;
 }
 
-@keyframes fadeInScale {
-  from { opacity: 0; transform: scale(0.97); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-.proyecto-imagen img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid #000;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.proyecto-imagen img:hover {
-  transform: scale(1.05) rotate(1deg);
-}
-
 /* ===== Botón GitHub ===== */
 .btn-github-bajo {
-  display: inline-flex;
+  display:inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   padding: 10px 2px;
   background-color: #181818;
   color: #fafafa;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.1em;
   border-radius: 30px;
   text-decoration: none;
   transition: all 0.3s ease;
-  width: 100%;
+  width: 70%;
   max-width: 240px;
   border: 2px solid transparent;
   cursor: pointer;
   user-select: none;
   animation: fadeInBtn 0.15s ease forwards;
   animation-delay: 0.925s;
-}
-
-@keyframes fadeInBtn {
-  from { opacity: 0; transform: translateY(5px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 .btn-github-bajo i.fab.fa-github {
@@ -207,28 +152,20 @@ body {
 }
 
 .proyecto-descripcion h3 {
-  font-weight: 700;
+  font-weight: 500;
   color: #2563eb;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   font-size: 1.5em;
   text-decoration: underline;
   max-width: 420px;
-  animation: fadeInTitle 0.2s ease forwards;
-  animation-delay: 0.75s;
+  
 }
 
 .proyecto-descripcion p {
   font-size: 1.15em;
   line-height: 1.55;
-  color: #334155;
+  color: #0f0f0f;
   font-weight: 500;
-  animation: fadeInText 0.2s ease forwards;
-  animation-delay: 0.775s;
-}
-
-@keyframes fadeInText {
-  from { opacity: 0; transform: translateY(3px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== Footer ===== */
@@ -236,11 +173,9 @@ body {
   background-color: #1a1a1a;
   color: #ddd;
   text-align: center;
-  padding: 30px 20px;
-  margin-top: 70px;
+  padding: 30px 2px;
+  margin-top: 60px;
   font-size: 0.9em;
-  animation: fadeInBody 0.35s ease forwards;
-  animation-delay: 1s;
 }
 
 .footer a {
@@ -256,91 +191,16 @@ body {
 
 /* ===== Iconos ===== */
 .icono-proyecto {
-  font-size: 100px;
+  font-size: 110px;
   color: #333;
   display: block;
-  margin: 60px auto 15px;
+  margin: 70px auto 15px;
   text-align: center;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .icono-proyecto:hover {
   transform: scale(1.1);
-  color: #007bff;
+  color: #facc15;
 }
 
-/* ===== Responsive: tablets y móviles ===== */
-@media (max-width: 768px) {
-  .navbar li {
-    display: block;
-    margin: 14px 0;
-  }
-
-  .proyecto {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .proyecto-imagen {
-    width: 100%;
-  }
-
-  .proyecto-imagen img {
-    max-height: 260px;
-    height: auto;
-  }
-
-  .btn-github-bajo {
-    max-width: none;
-    width: 60%;
-    margin: 0 auto;
-  }
-
-  .proyecto-descripcion {
-    padding-top: 20px;
-  }
-
-  .proyectos-principal {
-    margin: 20px 16px 40px;
-    padding: 30px 20px;
-  }
-}
-
-/* ===== Responsive: móviles pequeños ===== */
-@media (max-width: 480px) {
-  body {
-    padding-top: 60px;
-  }
-
-  .navbar {
-    padding: 14px 10px;
-  }
-
-  .navbar a {
-    font-size: 1em;
-    padding: 5px 8px;
-  }
-
-  .proyecto {
-    padding: 16px 12px;
-    gap: 16px;
-  }
-
-  .proyecto-descripcion h3 {
-    font-size: 1.2em;
-  }
-
-  .proyecto-descripcion p {
-    font-size: 1em;
-  }
-
-  .btn-github-bajo {
-    font-size: 1em;
-    width: 90%;
-  }
-
-  .icono-proyecto {
-    font-size: 64px;
-    margin-top: 30px;
-  }
-}

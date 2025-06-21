@@ -1,18 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-/* Animación fadeInUp para usar en toda la página */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-/* Estilos generales */
+
+/* Estilos generale */
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #64748b, #6c88af);
@@ -22,6 +12,7 @@ body {
   line-height: 1.65;
 }
 
+/* ===== Navbar fijo ===== */
 .navbar {
   background-color: #14213d;
   padding: 18px 20px;
@@ -58,8 +49,7 @@ body {
 .navbar a:hover {
   background-color: #facc15;
   color: #14213d;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px #facc15aa;
+  box-shadow: 0 10px 12px #facc15aa;
 }
 
 .presentacion {
@@ -137,7 +127,7 @@ section {
   padding: 45px 30px;
   background-color: #f5f5f5;
   border-radius: 16px;
-  border: 1px solid #000;
+  border: 3px solid #000;
   box-shadow: 0 6px 12px rgba(0,0,0,0.05);
   color: #222;
 }
@@ -159,6 +149,7 @@ h2 {
   padding: 14px 28px;
   border-radius: 12px;
   font-size: 1.2em;
+  border: 2px solid #000;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
@@ -174,57 +165,6 @@ h2 {
   transform: scale(1.05);
 }
 
-.footer {
-  background-color: #1a1a1a;
-  color: #ddd;
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 70px;
-  font-size: 0.9em;
-}
-
-.footer a {
-  color: #3b82f6;
-  text-decoration: none;
-  margin: 0 14px;
-  transition: color 0.3s ease;
-}
-
-.footer a:hover {
-  color: #93c5fd;
-}
-
-@media screen and (max-width: 768px) {
-  .navbar li {
-    display: block;
-    margin: 14px 0;
-  }
-
-  .presentacion,
-  section {
-    padding: 90px 20px 30px;
-    width: 95%;
-  }
-
-  .imagen-circular {
-    width: 140px;
-    height: 140px;
-  }
-
-  .presentacion h1 {
-    font-size: 2.2em;
-  }
-
-  h2 {
-    font-size: 1.8em;
-  }
-
-  .btn-cv {
-    font-size: 1.1em;
-    padding: 12px 24px;
-  }
-}
-
 .competencias-container {
   display: flex;
   justify-content: space-around;
@@ -236,7 +176,7 @@ h2 {
 .competencia-modulo {
   background: #f5f5f5;
   border-radius: 16px;
-  border: 1px solid #000;
+  border: 3px solid #000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 28px 22px;
   flex: 1 1 250px;
@@ -298,17 +238,6 @@ h2 {
   filter: brightness(1.2);
 }
 
-@media screen and (max-width: 768px) {
-  .competencias-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .competencia-modulo {
-    max-width: 100%;
-  }
-}
-
 .formacion-container {
   display: flex;
   justify-content: space-around;
@@ -341,7 +270,7 @@ h2 {
   margin: 0 auto 16px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid #15161a;
+  border: 3px solid #4c4c4e;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -349,7 +278,7 @@ h2 {
 }
 
 .logo-formacion img {
-  width: 80%;
+  width: 85%;
   height: auto;
   object-fit: contain;
 }
@@ -361,13 +290,42 @@ h2 {
   font-weight: 600;
 }
 
-@media screen and (max-width: 768px) {
-  .formacion-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .formacion-card {
-    max-width: 100%;
-  }
+/* ===== Iconos ===== */
+.icono-proyecto {
+  font-size: 110px;
+  color: #333;
+  display: block;
+  margin: 70px auto 15px;
+  text-align: center;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
+
+.icono-proyecto:hover {
+  transform: scale(1.1);
+  color: #facc15;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: #1a1a1a;
+  color: #ddd;
+  text-align: center;
+  padding: 30px 2px;
+  margin-top: 60px;
+  font-size: 0.9em;
+}
+
+.footer a {
+  color: #3b82f6;
+  text-decoration: none;
+  margin: 0 14px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #93c5fd;
+}
+
+
+
+
