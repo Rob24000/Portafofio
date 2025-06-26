@@ -170,25 +170,52 @@ main.contacto-principal {
   transform: scale(1.05);
 }
 
+/* ===== Footer ===== */
 .footer {
   background-color: #1a1a1a;
-  color: #ddd;
+  color: #2563eb;
   text-align: center;
-  padding: 1.875rem 1.25rem;
-  margin-top: 3.75rem;
-  font-size: 0.9rem;
+  padding: 30px 10px;
+  margin-top: 60px;
+  font-size: 1em;
 }
 
 .footer a {
-  color: #3b82f6;
+  color: #f0f1f3;
   text-decoration: none;
-  margin: 0 0.625rem;
   transition: color 0.3s ease;
 }
-
-.footer a:hover {
-  color: #93c5fd;
+.footer .footer-social .youtube :hover{
+  color: rgb(240, 36, 36);
 }
+
+.footer .footer-social .github :hover{
+  color:rgb(128, 125, 125);
+}
+
+.footer .footer-social .linkedin :hover {
+  color: #6fb0fa;
+}
+
+.footer .footer-contact a :hover{
+  color: #1e7eec;
+}
+
+.footer-contact {
+  display: inline-block;
+  margin: 1px 0;
+  font-size: 0.90em;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  font-size: 1.5em;
+}
+
 
 @media screen and (max-width: 695px) {
    /* Navbar más compacta */

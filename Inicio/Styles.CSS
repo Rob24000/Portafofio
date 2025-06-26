@@ -56,7 +56,6 @@ body {
   box-shadow: 0 1px 4px 4px #fcfbf7aa;
 }
 
-
 .presentacion {
   background: linear-gradient(135deg, #1c45c0, #4082ec);
   padding: 60px 30px 70px;
@@ -69,7 +68,7 @@ body {
   margin-right: auto;
   box-shadow: 0 6px 15px rgba(59,130,246,0.2);
 
-  /* animación */
+  /* animació  n */
   animation: zoomInBody 1s ease-out forwards;
   opacity: 0;
   transform: scale(0.80);
@@ -229,13 +228,13 @@ h2 {
 .competencia-modulo .iconos {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 21px;
   flex-wrap: wrap;
 }
 
 .icono-tec {
   font-size: 3.6rem;
-  padding: 9px;
+  padding: 8px;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -246,6 +245,7 @@ h2 {
 .icono-tec.poo { color: #5c5c5c; }
 .icono-tec.git { color: #f05032; }
 .icono-tec.github { color: #333; }
+.icono-tec.react { color:#6d9ce4}
 
 .icono-tec:hover {
   color: #facc15 !important;
@@ -335,23 +335,49 @@ h2 {
 /* ===== Footer ===== */
 .footer {
   background-color: #1a1a1a;
-  color: #ddd;
+  color: #2563eb;
   text-align: center;
-  padding: 30px 2px;
+  padding: 30px 10px;
   margin-top: 60px;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .footer a {
-  color: #3b82f6;
+  color: #f0f1f3;
   text-decoration: none;
-  margin: 0 14px;
   transition: color 0.3s ease;
 }
-
-.footer a:hover {
-  color: #93c5fd;
+.footer .footer-social .youtube :hover{
+  color: rgb(240, 36, 36);
 }
+
+.footer .footer-social .github :hover{
+  color:rgb(128, 125, 125);
+}
+
+.footer .footer-social .linkedin :hover {
+  color: #6fb0fa;
+}
+
+.footer .footer-contact a :hover{
+  color: #1e7eec;
+}
+
+.footer-contact {
+  display: inline-block;
+  margin: 1px 0;
+  font-size: 0.90em;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  font-size: 1.5em;
+}
+
 
 @media screen and (max-width: 695px) {
    /* Navbar más compacta */
@@ -421,9 +447,7 @@ h2 {
     gap: 10px;
   }
 
-  
 
-  
   .footer {
     font-size: 0.75em;
     padding: 16px 4px;
